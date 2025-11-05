@@ -1,58 +1,23 @@
-/*import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App*/
-
-
-//function app(){
-//  return 'hello vite';
-//}
-//export default app;
 import React from 'react'
 
 const App = () => {
+  function input(elem){
+    if(elem>0)
+    {
+      console.log("scrolling down",elem);
+    }else{
+       console.log("scrolling up",elem);
+    }
+    
+  }
   return (
-    <>
-     <div id='parent'>
-       <h1 id='child1'>Hello rafce</h1>
-       <h2 id='child2'>welcome to jsx</h2>
-     </div>
-     <div id='sibilng'>
-        <h1 id='sibling1'>jagan</h1>
-        <h1 id='sibling2'>madhu</h1>
-     </div>
-    </>
+     <div onWheel={(elem)=>
+     input(elem.deltaY)}>
+      <div className='box1'></div>
+      <div className='box2'></div>
+      <div className='box3'></div>
+      </div>
   )
 }
 
